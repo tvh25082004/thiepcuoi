@@ -395,8 +395,8 @@ class MapEffects {
         const directionsBtn = document.querySelector('.directions-btn');
         if (directionsBtn) {
             directionsBtn.addEventListener('click', () => {
-                // Mở Google Maps với link rút gọn
-                const googleMapsUrl = "https://maps.app.goo.gl/xFAX2cPF6nqnAog77";
+                // Mở Google Maps với link bạn yêu cầu
+                const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=RR24%2BG92%20Thanh%20Hóa";
                 window.open(googleMapsUrl, '_blank');
             });
         }
@@ -405,8 +405,8 @@ class MapEffects {
         if (viewLarger) {
             viewLarger.addEventListener('click', (e) => {
                 e.preventDefault();
-                const address = "RR24+G92 Thanh Hóa";
-                const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+                // Cùng link Google Maps như nút chỉ đường
+                const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=RR24%2BG92%20Thanh%20Hóa";
                 window.open(googleMapsUrl, '_blank');
             });
         }
