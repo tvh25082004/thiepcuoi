@@ -1,0 +1,1632 @@
+/* Reset và thiết lập cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #faf8f5 0%, #f5f1eb 50%, #f0ebe3 100%);
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+
+/* Thiệp cưới chính */
+.wedding-invitation {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #fefefe 0%, #faf8f5 100%);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.2);
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Hero Section - Ảnh cặp đôi */
+.hero-section {
+    position: relative;
+    text-align: center;
+    padding: 0;
+}
+
+.couple-photo {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.3);
+    animation: photoFloat 6s ease-in-out infinite;
+}
+
+@keyframes photoFloat {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-5px) rotate(0.5deg);
+    }
+    50% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-3px) rotate(-0.5deg);
+    }
+}
+
+.main-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    filter: brightness(0.9) contrast(1.1);
+    transition: all 0.5s ease;
+}
+
+.couple-photo:hover .main-photo {
+    transform: scale(1.02);
+    filter: brightness(1) contrast(1.2);
+}
+
+.photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: 2rem;
+    color: white;
+}
+
+.welcome-text {
+    text-align: center;
+}
+
+.welcome {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    font-weight: 600;
+    background: linear-gradient(45deg, #d4af37, #f4d03f, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.to-celebration {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.wedding-rings {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+/* Tên cặp đôi */
+.couple-names {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    background: #fefefe;
+}
+
+.groom-name, .bride-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.and {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    background: linear-gradient(45deg, #d4af37, #f4d03f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 500;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.wedding-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+.wedding-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+/* Thông tin lễ cưới */
+.ceremony-info {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #fefefe 0%, #f8f6f0 100%);
+    border-top: 2px solid #d4af37;
+    position: relative;
+}
+
+.ceremony-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.invitation-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.invitation-header p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.ceremony-details {
+    margin-top: 2rem;
+}
+
+.ceremony-type h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.ceremony-type p {
+    font-family: 'Inter', sans-serif;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.date-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.date-display .month,
+.date-display .day,
+.date-display .year {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.date-display .day {
+    font-size: 2rem;
+    color: #d4af37;
+}
+
+.separator {
+    color: #ccc;
+    font-size: 1.5rem;
+}
+
+.lunar-date {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+}
+
+/* Thông tin gia đình */
+.family-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #f8f8f8 0%, #f0ebe3 100%);
+    position: relative;
+}
+
+.family-info::before {
+    content: '💕';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    opacity: 0.3;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+.groom-family, .bride-family {
+    text-align: center;
+}
+
+.groom-family h4, .bride-family h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.family-details p {
+    font-family: 'Inter', sans-serif;
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.family-details strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Lễ Vu Quy */
+.wedding-ceremony {
+    padding: 3rem 2rem;
+    background: #fefefe;
+    text-align: center;
+}
+
+.ceremony-location {
+    margin-bottom: 2rem;
+}
+
+.ceremony-location .lunar-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.ceremony-location .location {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.main-ceremony h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.ceremony-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.time-info, .date-info {
+    text-align: center;
+}
+.xuat{
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    text-decoration: underline;
+
+}
+.time {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    text-decoration: underline;
+}
+
+.day {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    text-decoration: underline;
+}
+.month{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    text-decoration: underline;
+}
+.year{
+     font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    text-decoration: underline;
+}
+.day-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #d4af37;
+}
+
+.month, .year {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #333;
+    text-decoration: underline;
+}
+
+/* Album ảnh cưới */
+.photo-album {
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #f8f8f8 0%, #f0ebe3 100%);
+    text-align: center;
+    position: relative;
+}
+
+.photo-album h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    animation: fadeInUp 1s ease-out;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.photo-item {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    cursor: pointer;
+}
+
+.photo-item:hover {
+    transform: scale(1.08) rotate(2deg);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
+    z-index: 10;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.1);
+}
+
+.photo-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(212, 175, 55, 0.1), rgba(255, 107, 107, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.photo-item:hover::before {
+    opacity: 1;
+}
+
+/* Thêm ảnh cưới đẹp */
+.additional-photos {
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #fefefe 0%, #f8f6f0 100%);
+    text-align: center;
+}
+
+.additional-photos h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.additional-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.additional-photo-item {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    cursor: pointer;
+}
+
+.additional-photo-item:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+}
+
+.additional-photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.additional-photo-item:hover img {
+    transform: scale(1.15);
+}
+
+.additional-photo-item::after {
+    content: '💕';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.additional-photo-item:hover::after {
+    opacity: 1;
+    animation: heartBeat 1s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Địa điểm tổ chức */
+.location-section {
+    padding: 3rem 2rem;
+    background: #fefefe;
+    text-align: center;
+}
+
+.location-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.map-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.map-info {
+    margin-bottom: 1rem;
+}
+
+.coordinates {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.address {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.directions-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: background 0.3s ease;
+}
+
+.directions-btn:hover {
+    background: #0056b3;
+}
+
+.view-larger {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.view-larger:hover {
+    text-decoration: underline;
+}
+
+.google-map {
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Lịch tháng 11 */
+.calendar-section {
+    padding: 3rem 2rem;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.calendar-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.calendar {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+}
+
+.day-header {
+    padding: 0.8rem 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-day {
+    padding: 0.8rem 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    transition: background 0.3s ease;
+}
+
+.calendar-day:hover {
+    background: #f8f8f8;
+}
+
+.wedding-day {
+    background: #d4af37;
+    color: white;
+    font-weight: 600;
+}
+
+/* Lời cảm ơn */
+.thank-you {
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #fefefe 0%, #f8f6f0 100%);
+    text-align: center;
+}
+
+.thank-you-photo {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+    transition: all 0.5s ease;
+    animation: thankYouFloat 8s ease-in-out infinite;
+}
+
+@keyframes thankYouFloat {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+    }
+    50% {
+        transform: translateY(-8px) scale(1.02);
+    }
+}
+
+.thank-you-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(212, 175, 55, 0.4);
+}
+
+.thank-you-photo img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.thank-you-photo:hover img {
+    transform: scale(1.1);
+}
+
+.thank-you-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1.5rem;
+}
+
+.thank-you-overlay h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.thank-you-overlay p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Button gửi thiệp mừng cưới */
+.send-invitation {
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #fefefe 0%, #f8f6f0 100%);
+    text-align: center;
+}
+
+.invitation-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container cho 2 buttons */
+.invitation-buttons-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.send-invitation-btn {
+    background: linear-gradient(45deg, #d4af37, #f4d03f);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: buttonPulse 2s ease-in-out infinite;
+    min-width: 250px;
+}
+
+/* Button nhà trai */
+.nha-trai-btn {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
+}
+
+/* Button nhà gái */
+.nha-gai-btn {
+    background: linear-gradient(45deg, #E91E63, #C2185B);
+    box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+}
+
+@keyframes buttonPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+    }
+}
+
+.send-invitation-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.4);
+}
+
+.send-invitation-btn i {
+    font-size: 1.5rem;
+}
+
+/* Modal thiệp mừng cưới */
+.invitation-modal {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 10000;
+    animation: modalFadeIn 0.3s ease-out;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Thiệp nhà trai */
+.nha-trai-card {
+    border: 3px solid #4CAF50;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(69, 160, 73, 0.1));
+}
+
+.nha-trai-card .invitation-header h2 {
+    color: #4CAF50;
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+/* Thiệp nhà gái */
+.nha-gai-card {
+    border: 3px solid #E91E63;
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.1), rgba(194, 24, 91, 0.1));
+}
+
+.nha-gai-card .invitation-header h2 {
+    color: #E91E63;
+    text-shadow: 0 0 10px rgba(233, 30, 99, 0.5);
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.invitation-modal-content {
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease-out;
+    padding: 0;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-invitation-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #666;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10001;
+    transition: color 0.3s ease;
+}
+
+.close-invitation-modal:hover {
+    color: #d4af37;
+}
+
+.invitation-card {
+    padding: 1rem;
+    text-align: center;
+}
+
+.invitation-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 0.5rem;
+}
+
+.invitation-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.invitation-header p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #d4af37;
+    font-weight: 600;
+}
+
+.invitation-body {
+    margin-bottom: 2rem;
+}
+
+.qr-codes {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.qr-code-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f8f8;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.qr-code-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+
+.qr-code-item h4 {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.qr-code {
+    margin-bottom: 1rem;
+}
+
+.qr-code img {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border: 3px solid #fff;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+    .qr-code img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .invitation-modal {
+        width: 95%;
+        max-width: 350px;
+        bottom: 10px;
+    }
+}
+
+.qr-code-item p {
+    color: #666;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.invitation-message {
+    display: none;
+}
+
+.invitation-message h3 {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.invitation-message p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.invitation-footer {
+    display: none;
+}
+
+.share-btn, .download-btn {
+    background: linear-gradient(45deg, #d4af37, #f4d03f);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.share-btn:hover, .download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.designed-by {
+    color: #999;
+    font-style: italic;
+}
+
+/* Canvas cho hiệu ứng trái tim */
+#heartCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* Nhạc nền tự động phát (ẩn) */
+#backgroundMusic {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: -9999px;
+    width: 0;
+    height: 0;
+}
+
+/* Ảnh cặp đôi trong thư mời */
+.invitation-photo {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.invitation-couple-photo {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+    animation: photoFloat 6s ease-in-out infinite;
+}
+
+.invitation-couple-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.5);
+}
+
+.invitation-message {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 0 2rem;
+}
+
+.invitation-message p {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+/* Hiệu ứng chim bay */
+.flying-birds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.bird {
+    position: absolute;
+    font-size: 2rem;
+    animation: flyAcross 8s linear infinite;
+    opacity: 0.8;
+}
+
+.bird-1 {
+    top: 20%;
+    animation-delay: 0s;
+    animation-duration: 10s;
+}
+
+.bird-2 {
+    top: 40%;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.bird-3 {
+    top: 60%;
+    animation-delay: 4s;
+    animation-duration: 9s;
+}
+
+.bird-4 {
+    top: 80%;
+    animation-delay: 6s;
+    animation-duration: 11s;
+}
+
+.bird-5 {
+    top: 30%;
+    animation-delay: 1s;
+    animation-duration: 8s;
+}
+
+.bird-6 {
+    top: 50%;
+    animation-delay: 3s;
+    animation-duration: 10s;
+}
+
+.bird-7 {
+    top: 70%;
+    animation-delay: 5s;
+    animation-duration: 9s;
+}
+
+@keyframes flyAcross {
+    0% {
+        left: -100px;
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+    50% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(20px) rotate(-5deg);
+    }
+    100% {
+        left: calc(100% + 100px);
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+/* Hiệu ứng hoa rơi */
+.falling-flowers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.flower {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: fallDown 6s linear infinite;
+    opacity: 0.7;
+}
+
+.flower-1 {
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 8s;
+}
+
+.flower-2 {
+    left: 30%;
+    animation-delay: 1s;
+    animation-duration: 7s;
+}
+
+.flower-3 {
+    left: 50%;
+    animation-delay: 2s;
+    animation-duration: 9s;
+}
+
+.flower-4 {
+    left: 70%;
+    animation-delay: 3s;
+    animation-duration: 6s;
+}
+
+.flower-5 {
+    left: 90%;
+    animation-delay: 4s;
+    animation-duration: 8s;
+}
+
+@keyframes fallDown {
+    0% {
+        top: -50px;
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        top: calc(100% + 50px);
+        transform: rotate(360deg);
+    }
+}
+
+/* Hiệu ứng kim cương rơi */
+.falling-diamonds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.diamond {
+    position: absolute;
+    font-size: 1.2rem;
+    animation: diamondFall 5s linear infinite;
+    opacity: 0.8;
+}
+
+.diamond-1 {
+    left: 20%;
+    animation-delay: 0s;
+    animation-duration: 6s;
+}
+
+.diamond-2 {
+    left: 40%;
+    animation-delay: 1.5s;
+    animation-duration: 7s;
+}
+
+.diamond-3 {
+    left: 60%;
+    animation-delay: 3s;
+    animation-duration: 5s;
+}
+
+.diamond-4 {
+    left: 80%;
+    animation-delay: 4.5s;
+    animation-duration: 6s;
+}
+
+@keyframes diamondFall {
+    0% {
+        top: -30px;
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.2);
+    }
+    100% {
+        top: calc(100% + 30px);
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+/* Tiêu đề đặc biệt cho lễ cưới */
+.ceremony-title-special {
+    background: linear-gradient(45deg, #d4af37, #f4d03f, #d4af37);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmerText 3s ease-in-out infinite;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.nap-tai-title {
+    background: linear-gradient(45deg, #ff6b6b, #ffd93d, #ff6b6b);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmerText 3s ease-in-out infinite;
+}
+
+@keyframes shimmerText {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Phần Nạp Tài đặc biệt */
+.nap-tai-section {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 217, 61, 0.1));
+    border: 2px solid rgba(255, 107, 107, 0.3);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nap-tai-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255, 107, 107, 0.1), transparent);
+    animation: napTaiShimmer 4s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes napTaiShimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Phần mời ăn thân mật */
+.meal-invitation {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 152, 0, 0.1));
+    border: 2px solid rgba(255, 193, 7, 0.3);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.meal-title {
+    background: linear-gradient(45deg, #FFC107, #FF9800);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmerText 3s ease-in-out infinite;
+}
+
+.meal-message {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(255, 193, 7, 0.1);
+    border-radius: 10px;
+}
+
+.meal-message p {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0.5rem 0;
+    font-style: italic;
+}
+.vu-quy-invitation{
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 152, 0, 0.1));
+    border: 2px solid rgba(255, 193, 7, 0.3);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+
+}
+/* Hiệu ứng trái tim bay lơ lửng */
+@keyframes floatUp {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-100px) rotate(180deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-200px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Hiệu ứng lấp lánh */
+@keyframes sparkleFloat {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2) rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Hiệu ứng chim bay ngẫu nhiên */
+@keyframes flyAcross {
+    0% {
+        left: -100px;
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+    50% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(20px) rotate(-5deg);
+    }
+    100% {
+        left: calc(100vw + 100px);
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wedding-invitation {
+        margin: 0;
+        box-shadow: none;
+    }
+    
+    .couple-names {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    
+    .groom-name, .bride-name {
+        font-size: 2rem;
+    }
+    
+    .family-info {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .ceremony-time {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome {
+        font-size: 2.5rem;
+    }
+    
+    .groom-name, .bride-name {
+        font-size: 1.8rem;
+    }
+    
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .calendar {
+        max-width: 100%;
+    }
+    
+    .day-header, .calendar-day {
+        padding: 0.6rem 0;
+        font-size: 0.8rem;
+    }
+}
+
+/* Hiệu ứng scroll */
+.wedding-invitation {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hiệu ứng hover cho ảnh */
+.photo-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(212, 175, 55, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.photo-item:hover::before {
+    opacity: 1;
+}
+
+/* Hiệu ứng cho ngày cưới trong lịch */
+.wedding-day {
+    position: relative;
+}
+
+.wedding-day::after {
+    content: '💍';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
